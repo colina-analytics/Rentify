@@ -1,0 +1,64 @@
+.nav-bar {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    width: 3.2%;
+    height: 85%;
+    background-color: #B3C2EA; 
+    border-radius: 40px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.nav-bar:hover {
+    width: 15%; /* Expand width on hover */
+}
+
+.nav-bar-icon {
+    display: flex;
+    flex-direction: row; /* Changed to row to align text beside icon */
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    margin: 1rem 0;
+    padding-left: 1rem; /* Padding to position icon and text */
+}
+
+.nav-bar-icon img {
+    height: 4vh; /* Adjust the size of the icon as needed */
+    width: auto;
+}
+
+.nav-bar-text {
+    display: block; /* Display text */
+    color: #595BD4;
+    font-size: 2vh;
+    margin-left: 0rem; /* Margin to position text beside the icon */
+    margin-bottom: 0.2rem;
+    position: absolute;
+    left: 50px; /* Position text to the right of the icon */
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade in */
+}
+
+.nav-bar:hover .nav-bar-text {
+    opacity: 1; /* Fade in text on hover */
+}
+
+.logo {
+    position: relative;
+    width: 1rem;
+    height: 1vh;
+    text-align: left;
+}
+
+.logo img {
+    height: 10vh; /* Adjust the size of the logo as needed */
+}

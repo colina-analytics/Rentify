@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/containers.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+</head>
+
+<body>
+    <div class="background">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flashes" id="flash-message">
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    <div class="nav-bar">
+        <div class="nav-bar-icon">
+            <a href="{{ url_for('home.home') }}">
+                <img src="{{ url_for('static', filename='imgs/icons/home.png') }}" alt="Home">
+            </a>
+                <div class="nav-bar-text">Home</div>
+        </div>
+        <div class="nav-bar-icon">
+            <a href="{{ url_for('messaging.messaging') }}">
+                <img src="{{ url_for('static', filename='imgs/icons/messaging.png') }}" alt="Pitch">
+            </a>
+            <div class="nav-bar-text">Talk with people</div>
+        </div>
+        <div class="nav-bar-icon">
+            <a href="{{ url_for('search.search') }}">
+                <img src="{{ url_for('static', filename='imgs/icons/search.png') }}" alt="Pitch">
+            </a>
+            <div class="nav-bar-text">Search for items</div>
+        </div>
+        <div class="nav-bar-icon">
+            <a href="{{ url_for('calendar.calendar') }}">
+                <img src="{{ url_for('static', filename='imgs/icons/calendar.png') }}" alt="Pitch">
+            </a>
+            <div class="nav-bar-text">View your items</div>
+        </div>
+
+
+        <div class="nav-bar-icon">
+            <a href="{{ url_for('auth.logout') }}">
+                <img src="{{ url_for('static', filename='imgs/icons/logout.png') }}" alt="Logout">
+            </a>
+            <div class="nav-bar-text">Logout</div>
+        </div>
+        
+        <div class="logo" style="margin-top: auto; margin-bottom: 3rem; text-align: center; margin-right: 0.5rem;">
+            <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Rentify Logo" style="height: 6vh;">
+        </div>
+    </div>
+</body>
+</html>

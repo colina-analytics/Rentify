@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="menu-container">
+        <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Logo">
+    </div>
+
+    <div class="card-long login-card" style="top: 18%; left: 15%; height: 65%; width: 70%">
+        <h2 style="text-align: left;">Welcome to Rentify :)</h2>
+        <form method="POST" action="{{ url_for('auth.login') }}">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.email.label }}
+                {{ form.email(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password(class="form-control") }}
+            </div>
+            <div class="form-group remember-me">
+                {{ form.remember() }}
+                {{ form.remember.label }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock %}

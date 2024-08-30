@@ -1,0 +1,131 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(34, 31, 31, 0.1);
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 2.5rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: #333333;
+    align-items: left;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    text-align: left;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 14px;
+    color: #333333;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.form-control {
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.form-param {
+    margin-bottom: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: left;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-param label {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.2rem !important;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.btn-primary {
+    width: 10%;
+    padding: 10px;
+    margin-top: 1rem;
+    background-color: #82AED6;
+    border: none;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+.flashes {
+    text-align: center;
+    border: 0px solid red;
+    position: absolute;
+    top: 2%;
+    z-index: 100;
+    width: 60%;
+}
+
+.flash-message {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1.2rem;
+    height: 20%;
+}
+
+.flash-message.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}

@@ -1,0 +1,191 @@
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Light blue background */
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px 4px 2px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: 80%;
+    padding: 2rem;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+.logo-container img {
+    height: 20vh; /* Adjust the size of the logo as needed */
+}
+
+.menu-container {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh
+}
+
+.menu-container img {
+    height: 10vh; /* Adjust the size of the menu icon as needed */
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 88%;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+.chart-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensure the image fits within the container without distortion */
+    border-radius: 10px; /* Apply the same border-radius to the image */
+    margin-top: 0px;
+    padding-top: 0px
+}
+
+.chart-half {
+    width: 50%;
+    align-items: block;
+}
+
+#plot {
+    width: 100%;
+    height: 85%; /* Adjust the height as needed */
+    border: 0px solid #004c97; /* Add a border for debugging */
+    overflow: hidden;
+}
+
+.half-title-container {
+    position: absolute;
+    font-size: 1rem; /* Adjust as needed */
+    font-weight: 300; /* Lighter weight */
+    margin: 0; /* Remove margin */
+    padding: 0;
+    text-align: center; /* Center the text */
+    border: 0px solid #004c97;
+    width: 50%;
+    z-index: 1;
+    top: 15%;
+
+}
+
+#report {
+    position: relative;
+}
+
+#report:hover #download-btn {
+    display: block;
+}
+
+#download-btn {
+    position: absolute;
+    size: 1rem;
+    right: 5%;
+    bottom: 6%;
+    padding: 1rem;
+    background-color: #1f74c9da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.info-container{
+    position: absolute;
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid red;
+    top: 2%;
+    right: 2%;
+}
+
+.info-container.large:hover::after{
+    content: attr(data-tooltip);
+    white-space: pre-wrap;
+    position: absolute;
+    top: 2rem;
+    left: -35rem;
+    width: 33rem;
+    height: auto;
+    padding: 1rem;
+    background-color: #82AED6;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    z-index: 3;
+    font-size: 1.2rem;
+    text-align: left;
+
+}
+
+.info-container img{
+    height: 2rem;
+}
+
+.info-container:hover::after {
+    content: attr(data-tooltip);
+    white-space: pre-wrap;
+    position: absolute;
+    top: 2rem;
+    left: -22rem;
+    width: 20rem;
+    padding: 1rem;
+    background-color: rgb(221, 230, 245);
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    z-index: 3;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.valuation-col{
+    align-items: top;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    padding-top: 0px;
+}
+
+.flag-container {
+    height: 2rem;
+    width: 3rem; 
+}
+
+.flag-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
